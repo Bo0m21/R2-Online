@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>@ViewData["Title"] - R2 Balance</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container" style="max-width: 100%">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">R2 Balance</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Главная</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Персонажи
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="Characters" asp-action="Index">Персонажи</a>
+                                <a class="dropdown-item" asp-controller="CharactersPositions" asp-action="Index">Позиции персонажей</a>
+                                <a class="dropdown-item" asp-controller="Exps" asp-action="Index">Уровни персонажей</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Итемы
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#">Экипировка »</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Weapon">Оружие</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Shield">Щиты</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Armor">Доспехи</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Ring">Кольца</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Amulet">Ожерелья</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Boot">Ботинки</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Glove">Перчатки</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Cap">Шлемы</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Belt">Ремни</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Cloak">Плащи</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Arrow">Снаряды</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Сферы »</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="ExpertnessMaterial">Мастерства</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="SoulMaterial">Души</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="DefenseMaterial">Защиты</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="AttackMaterial">Разрушения</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="LifeMaterial">Жизни</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="EventAMaterial">Доп. сфера 1</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="EventBMaterial">Доп. сфера 2</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="EventCMaterial">Доп. сфера 3</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Трофеи »</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="AchieveCoin">Монеты</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="AchieveTrophy">Трофеи</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="AchieveCoinPocket">Мешки</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Питомцы »</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Servant">Питомцы</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="ServantScroll">Свитки</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="ServantEtc">Другое</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="ServantPotion">Зелья питомцев</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">Используемые »</a>
+                                    <ul class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Potion">Зелья</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Food">Еда</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Premium">Премиум</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Book">Книги</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Scrolls">Свитки</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Stick">Жезлы</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Package">Сундуки</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Event">Ивент</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Gold">Валюта</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="Etc">Другое</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="AllUsable">Все используемые</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="AllEquip">Вся экипировка</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Items" asp-action="Index" asp-route-itemType="All">Все предметы</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="UnitDrops" asp-action="Index">Дроп</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Улучшения
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="ItemReinforces" asp-action="Index">Улучшения предметов</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Бафы
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="Buffs" asp-action="Index">Бафы</a>
+                                <a class="dropdown-item" asp-controller="BuffItems" asp-action="Index">Бафы итемов</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Юниты
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="Units" asp-action="Index">Юниты</a>
+                                <a class="dropdown-item" asp-controller="UnitPositions" asp-action="Index">Позиции юнитов</a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+                                Юниты общее
+                            </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" asp-controller="UnitPurchases" asp-action="Index">Покупка предметов</a>
+                                <a class="dropdown-item" asp-controller="UnitSales" asp-action="Index">Продажа предметов</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container" style="max-width: 100%">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container" style="max-width: 100%">
+            &copy; 2020 - R2 Balance
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Prevent closing from click inside dropdown
+        $(document).on('click', '.dropdown-menu', function (e) {
+            e.stopPropagation();
+        });
+
+        // make it as accordion for smaller screens
+        if ($(window).width() < 992) {
+            $('.dropdown-menu a').click(function (e) {
+                e.preventDefault();
+                if ($(this).next('.submenu').length) {
+                    $(this).next('.submenu').toggle();
+                }
+                $('.dropdown').on('hide.bs.dropdown', function () {
+                    $(this).find('.submenu').hide();
+                })
+            });
+        }
+    </script>
+    <style type="text/css">
+	   @@media (min-width: 992px){
+	.dropdown-menu .dropdown-toggle:after{
+		border-top: .3em solid transparent;
+	    border-right: 0;
+	    border-bottom: .3em solid transparent;
+	    border-left: .3em solid;
+	}
+	.dropdown-menu .dropdown-menu{
+		margin-left:0; margin-right: 0;
+	}
+	.dropdown-menu li{
+		position: relative;
+	}
+	.nav-item .submenu{
+		display: none;
+		position: absolute;
+		left:100%; top:-7px;
+	}
+	.nav-item .submenu-left{
+		right:100%; left:auto;
+	}
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{
+		display: block;
+	}
+}
+    </style>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

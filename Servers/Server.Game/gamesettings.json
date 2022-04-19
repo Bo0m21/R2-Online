@@ -1,0 +1,18 @@
+{
+  "GameSetting": {
+    "Id": 100,
+    "ServerIp": "127.0.0.1",
+    "ServerPort": 11007,
+
+    "GarbageItems": 100000,
+    "GarbageUnits": 30000,
+
+    "RecoveryCharacteristics": 10000,
+
+    "VisibleConnections": 2250,
+    "VisibleItems": 2250,
+    "VisibleUnits": 2250,
+
+    "ItemPickUpDistance": 400
+  }
+}

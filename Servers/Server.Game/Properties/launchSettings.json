@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Server.Game": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNETCORE_ENVIRONMENT": "Debug"
+      }
+    }
+  }
+}

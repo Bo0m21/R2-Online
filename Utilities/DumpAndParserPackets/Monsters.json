@@ -1,0 +1,191 @@
+[
+  {
+    "Flag": 1281,
+    "AttackSpeed": 1400,
+    "MovingSpeed": 300,
+    "ParmNo": 342,
+    "Position": {
+      "X": 696563.56,
+      "Y": 110882.445,
+      "Z": 12932.275
+    },
+    "DirectionSight": 4.712389,
+    "MonsterId": 342,
+    "TransformationId": 342,
+    "Chaotic": 0,
+    "Level": 1,
+    "Hp": -1,
+    "OwnerName": "",
+    "SummonType": 0,
+    "OwnerPcNo": 0,
+    "OwnerPcGuildNo": 0,
+    "UID": {
+      "Id": 5283,
+      "Class": 1,
+      "Seq": 0,
+      "IsSeq": 0
+    }
+  },
+  {
+    "Flag": 1,
+    "AttackSpeed": 1400,
+    "MovingSpeed": 260,
+    "ParmNo": 680,
+    "Position": {
+      "X": 695514.6,
+      "Y": 110728.18,
+      "Z": 12940.528
+    },
+    "DirectionSight": 5.585053,
+    "MonsterId": 680,
+    "TransformationId": 680,
+    "Chaotic": 0,
+    "Level": 50,
+    "Hp": -1,
+    "OwnerName": "",
+    "SummonType": 0,
+    "OwnerPcNo": 0,
+    "OwnerPcGuildNo": 0,
+    "UID": {
+      "Id": 5716,
+      "Class": 1,
+      "Seq": 0,
+      "IsSeq": 0
+    }
+  },
+  {
+    "Flag": 1,
+    "AttackSpeed": 1400,
+    "MovingSpeed": 260,
+    "ParmNo": 2091,
+    "Position": {
+      "X": 695992.94,
+      "Y": 110699.39,
+      "Z": 12937.761
+    },
+    "DirectionSight": 5.585053,
+    "MonsterId": 2091,
+    "TransformationId": 2091,
+    "Chaotic": 0,
+    "Level": 50,
+    "Hp": -1,
+    "OwnerName": "",
+    "SummonType": 0,
+    "OwnerPcNo": 0,
+    "OwnerPcGuildNo": 0,
+    "UID": {
+      "Id": 6928,
+      "Class": 1,
+      "Seq": 0,
+      "IsSeq": 0
+    }
+  },
+  {
+    "Flag": 1281,
+    "AttackSpeed": 1400,
+    "MovingSpeed": 300,
+    "ParmNo": 355,
+    "Position": {
+      "X": 693236.94,
+      "Y": 114200.62,
+      "Z": 12550.576
+    },
+    "DirectionSight": 6.038839,
+    "MonsterId": 355,
+    "TransformationId": 355,
+    "Chaotic": 0,
+    "Level": 1,
+    "Hp": -1,
+    "OwnerName": "",
+    "SummonType": 0,
+    "OwnerPcNo": 0,
+    "OwnerPcGuildNo": 0,
+    "UID": {
+      "Id": 1739,
+      "Class": 1,
+      "Seq": 0,
+      "IsSeq": 0
+    }
+  },
+  {
+    "Flag": 513,
+    "AttackSpeed": 1400,
+    "MovingSpeed": 300,
+    "ParmNo": 354,
+    "Position": {
+      "X": 693472.2,
+      "Y": 112929.61,
+      "Z": 12540.258
+    },
+    "DirectionSight": 0.0,
+    "MonsterId": 354,
+    "TransformationId": 354,
+    "Chaotic": 0,
+    "Level": 1,
+    "Hp": -1,
+    "OwnerName": "",
+    "SummonType": 0,
+    "OwnerPcNo": 0,
+    "OwnerPcGuildNo": 0,
+    "UID": {
+      "Id": 6592,
+      "Class": 1,
+      "Seq": 0,
+      "IsSeq": 0
+    }
+  },
+  {
+    "Flag": 1,
+    "AttackSpeed": 1400,
+    "MovingSpeed": 300,
+    "ParmNo": 337,
+    "Position": {
+      "X": 696469.06,
+      "Y": 112292.18,
+      "Z": 12540.258
+    },
+    "DirectionSight": 1.570796,
+    "MonsterId": 337,
+    "TransformationId": 337,
+    "Chaotic": 0,
+    "Level": 1,
+    "Hp": -1,
+    "OwnerName": "",
+    "SummonType": 0,
+    "OwnerPcNo": 0,
+    "OwnerPcGuildNo": 0,
+    "UID": {
+      "Id": 1654,
+      "Class": 1,
+      "Seq": 0,
+      "IsSeq": 0
+    }
+  },
+  {
+    "Flag": 29441,
+    "AttackSpeed": 1400,
+    "MovingSpeed": 300,
+    "ParmNo": 2065,
+    "Position": {
+      "X": 695471.0,
+      "Y": 112719.2,
+      "Z": 12531.486
+    },
+    "DirectionSight": 0.523599,
+    "MonsterId": 2065,
+    "TransformationId": 2065,
+    "Chaotic": 0,
+    "Level": 0,
+    "Hp": -1,
+    "OwnerName": "",
+    "SummonType": 0,
+    "OwnerPcNo": 0,
+    "OwnerPcGuildNo": 0,
+    "UID": {
+      "Id": 5753,
+      "Class": 1,
+      "Seq": 0,
+      "IsSeq": 0
+    }
+  }
+]

@@ -1,0 +1,437 @@
+﻿@using Database.Balance.Enums
+@model Database.Balance.Models.ItemModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Create @Model.Type</h4>
+
+<hr />
+<form class="pl-md-5 pr-md-5" asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="form-group mx-sm-3 mb-2">
+            <label asp-for="Type" class="control-label"></label>
+            <select asp-for="Type" asp-items="Html.GetEnumSelectList<ItemType>()" class="form-control">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="Type" class="text-danger"></span>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label asp-for="ItemId" class="control-label"></label>
+            <input asp-for="ItemId" class="form-control" />
+            <span asp-validation-for="ItemId" class="text-danger"></span>
+        </div>
+        <div class="form-group mx-sm-3 mb-2 col-md-3">
+            <label asp-for="Name" class="control-label"></label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label asp-for="EquipType" class="control-label"></label>
+            <select asp-for="EquipType" asp-items="Html.GetEnumSelectList<ItemEquipType>()" class="form-control">
+                <option selected="selected" value="">Please select</option>
+            </select>
+            <span asp-validation-for="EquipType" class="text-danger"></span>
+        </div>
+        <div class="form-group mx-sm-2 mb-2">
+            <label class="control-label">&nbsp</label>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-dark">
+                    <input class="form-check-input" asp-for="IsUsable" /> @Html.DisplayNameFor(model => model.IsUsable)
+                </label>
+            </div>
+        </div>
+        <div class="form-group mx-sm-0 mb-2">
+            <label class="control-label">&nbsp</label>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-outline-dark">
+                    <input class="form-check-input" asp-for="IsStack" /> @Html.DisplayNameFor(model => model.IsStack)
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="form-group col-md-3">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="DDvMin" class="control-label"></label>
+                    <input asp-for="DDvMin" class="form-control" />
+                    <span asp-validation-for="DDvMin" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="DDvMax" class="control-label"></label>
+                    <input asp-for="DDvMax" class="form-control" />
+                    <span asp-validation-for="DDvMax" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="DPv" class="control-label"></label>
+                    <input asp-for="DPv" class="form-control" />
+                    <span asp-validation-for="DPv" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="DDd" class="control-label"></label>
+                    <input asp-for="DDd" class="form-control" />
+                    <span asp-validation-for="DDd" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Dhit" class="control-label"></label>
+                    <input asp-for="Dhit" class="form-control" />
+                    <span asp-validation-for="Dhit" class="text-danger"></span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="form-group col-md-3">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="RDvMin" class="control-label"></label>
+                    <input asp-for="RDvMin" class="form-control" />
+                    <span asp-validation-for="RDvMin" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="RDvMax" class="control-label"></label>
+                    <input asp-for="RDvMax" class="form-control" />
+                    <span asp-validation-for="RDvMax" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="RPv" class="control-label"></label>
+                    <input asp-for="RPv" class="form-control" />
+                    <span asp-validation-for="RPv" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="RDd" class="control-label"></label>
+                    <input asp-for="RDd" class="form-control" />
+                    <span asp-validation-for="RDd" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Rhit" class="control-label"></label>
+                    <input asp-for="Rhit" class="form-control" />
+                    <span asp-validation-for="Rhit" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-3">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="MDvMin" class="control-label"></label>
+                    <input asp-for="MDvMin" class="form-control" />
+                    <span asp-validation-for="MDvMin" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="MDvMax" class="control-label"></label>
+                    <input asp-for="MDvMax" class="form-control" />
+                    <span asp-validation-for="MDvMax" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="MPv" class="control-label"></label>
+                    <input asp-for="MPv" class="form-control" />
+                    <span asp-validation-for="MPv" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="MDd" class="control-label"></label>
+                    <input asp-for="MDd" class="form-control" />
+                    <span asp-validation-for="MDd" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Mhit" class="control-label"></label>
+                    <input asp-for="Mhit" class="form-control" />
+                    <span asp-validation-for="Mhit" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="form-group col">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Critical" class="control-label"></label>
+                    <input asp-for="Critical" class="form-control" />
+                    <span asp-validation-for="Critical" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="CriticalProtect" class="control-label"></label>
+                    <input asp-for="CriticalProtect" class="form-control" />
+                    <span asp-validation-for="CriticalProtect" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="DDvCriticalAdd" class="control-label"></label>
+                    <input asp-for="DDvCriticalAdd" class="form-control" />
+                    <span asp-validation-for="DDvCriticalAdd" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="DDvCriticalRemove" class="control-label"></label>
+                    <input asp-for="DDvCriticalRemove" class="form-control" />
+                    <span asp-validation-for="DDvCriticalRemove" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="AttackRate" class="control-label"></label>
+                    <input asp-for="AttackRate" class="form-control" />
+                    <span asp-validation-for="AttackRate" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="MoveRate" class="control-label"></label>
+                    <input asp-for="MoveRate" class="form-control" />
+                    <span asp-validation-for="MoveRate" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="AttackRateWhenTransform" class="control-label"></label>
+                    <input asp-for="AttackRateWhenTransform" class="form-control" />
+                    <span asp-validation-for="AttackRateWhenTransform" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="MoveRateWhenTransform" class="control-label"></label>
+                    <input asp-for="MoveRateWhenTransform" class="form-control" />
+                    <span asp-validation-for="MoveRateWhenTransform" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="HumanKiller" class="control-label"></label>
+                    <input asp-for="HumanKiller" class="form-control" />
+                    <span asp-validation-for="HumanKiller" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="HumanProtect" class="control-label"></label>
+                    <input asp-for="HumanProtect" class="form-control" />
+                    <span asp-validation-for="HumanProtect" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="MobKiller" class="control-label"></label>
+                    <input asp-for="MobKiller" class="form-control" />
+                    <span asp-validation-for="MobKiller" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="MobProtect" class="control-label"></label>
+                    <input asp-for="MobProtect" class="form-control" />
+                    <span asp-validation-for="MobProtect" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="form-group col-md-1">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Str" class="control-label"></label>
+                    <input asp-for="Str" class="form-control" />
+                    <span asp-validation-for="Str" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Dex" class="control-label"></label>
+                    <input asp-for="Dex" class="form-control" />
+                    <span asp-validation-for="Dex" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Int" class="control-label"></label>
+                    <input asp-for="Int" class="form-control" />
+                    <span asp-validation-for="Int" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-3">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Weight" class="control-label"></label>
+                    <input asp-for="Weight" class="form-control" />
+                    <span asp-validation-for="Weight" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="WeightMax" class="control-label"></label>
+                    <input asp-for="WeightMax" class="form-control" />
+                    <span asp-validation-for="WeightMax" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="UseLevel" class="control-label"></label>
+                    <input asp-for="UseLevel" value="1" class="form-control" />
+                    <span asp-validation-for="UseLevel" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="DistanceAttack" class="control-label"></label>
+                    <input asp-for="DistanceAttack" value="500" class="form-control" />
+                    <span asp-validation-for="DistanceAttack" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Hp" class="control-label"></label>
+                    <input asp-for="Hp" class="form-control" />
+                    <span asp-validation-for="Hp" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="HpRegen" class="control-label"></label>
+                    <input asp-for="HpRegen" class="form-control" />
+                    <span asp-validation-for="HpRegen" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="HpPotionRestore" class="control-label"></label>
+                    <input asp-for="HpPotionRestore" class="form-control" />
+                    <span asp-validation-for="HpPotionRestore" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="AddPotionRestoreHp" class="control-label"></label>
+                    <input asp-for="AddPotionRestoreHp" class="form-control" />
+                    <span asp-validation-for="AddPotionRestoreHp" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="AddTransformMaxHp" class="control-label"></label>
+                    <input asp-for="AddTransformMaxHp" class="form-control" />
+                    <span asp-validation-for="AddTransformMaxHp" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group col">
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="Mp" class="control-label"></label>
+                    <input asp-for="Mp" class="form-control" />
+                    <span asp-validation-for="Mp" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="MpRegen" class="control-label"></label>
+                    <input asp-for="MpRegen" class="form-control" />
+                    <span asp-validation-for="MpRegen" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="MpPotionRestore" class="control-label"></label>
+                    <input asp-for="MpPotionRestore" class="form-control" />
+                    <span asp-validation-for="MpPotionRestore" class="text-danger"></span>
+                </div>
+                <div class="form-group col">
+                    <label asp-for="AddPotionRestoreMp" class="control-label"></label>
+                    <input asp-for="AddPotionRestoreMp" class="form-control" />
+                    <span asp-validation-for="AddPotionRestoreMp" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col">
+                    <label asp-for="AddTransformMaxMp" class="control-label"></label>
+                    <input asp-for="AddTransformMaxMp" class="form-control" />
+                    <span asp-validation-for="AddTransformMaxMp" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr />
+
+    <div class="row">
+        <div class="form-group col-md-2">
+            <label asp-for="IncDrop" class="control-label"></label>
+            <input asp-for="IncDrop" class="form-control" />
+            <span asp-validation-for="IncDrop" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IncExp" class="control-label"></label>
+            <input asp-for="IncExp" class="form-control" />
+            <span asp-validation-for="IncExp" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-2">
+            <label asp-for="IncSilver" class="control-label"></label>
+            <input asp-for="IncSilver" class="form-control" />
+            <span asp-validation-for="IncSilver" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-secondary btn-sm ml-3 mt-1 mb-2">
+                <input class="form-check-input" asp-for="UseKnight" /> @Html.DisplayNameFor(model => model.UseKnight)
+            </label>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-success btn-sm ml-1 mt-1 mb-2">
+                <input class="form-check-input" asp-for="UseRanger" /> @Html.DisplayNameFor(model => model.UseRanger)
+            </label>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-danger btn-sm ml-1 mt-1 mb-2">
+                <input class="form-check-input" asp-for="UseMagician" /> @Html.DisplayNameFor(model => model.UseMagician)
+            </label>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-warning btn-sm ml-1 mt-1 mb-2">
+                <input class="form-check-input" asp-for="UseAssassin" /> @Html.DisplayNameFor(model => model.UseAssassin)
+            </label>
+        </div>
+        <div class="btn-group-toggle" data-toggle="buttons">
+            <label class="btn btn-outline-info btn-sm ml-1 mt-1 mb-2">
+                <input class="form-check-input" asp-for="UseSummoner" /> @Html.DisplayNameFor(model => model.UseSummoner)
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="btn-group-toggle " data-toggle="buttons">
+            <label class="btn btn-outline-dark btn-sm ml-3 mt-2 mb-2">
+                <input class="form-check-input" asp-for="UseInAttack" /> @Html.DisplayNameFor(model => model.UseInAttack)
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-md-6 col-sm-2">
+            <input type="submit" value="Create" class="btn btn-primary" />
+            <a asp-action="Index" asp-route-itemType="@Model.Type" class="btn btn-outline-primary">Back to List</a>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

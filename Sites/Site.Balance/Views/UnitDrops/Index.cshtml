@@ -1,0 +1,90 @@
+﻿@model IEnumerable<Database.Balance.Models.UnitDropModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Unit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UseCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EatTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TermOfEffectivity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemBind)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountTo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Percent)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UseCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EatTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TermOfEffectivity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemBind)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Percent)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
