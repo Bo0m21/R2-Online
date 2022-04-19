@@ -1,0 +1,7 @@
+{
+  "LoginSetting": {
+    "Id": 100,
+    "ServerIp": "192.168.1.129",
+    "ServerPort": 11015
+  }
+}

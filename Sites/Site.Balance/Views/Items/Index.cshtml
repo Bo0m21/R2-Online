@@ -1,0 +1,434 @@
+﻿@model IEnumerable<Database.Balance.Models.ItemModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<style>
+    .tableFixHead {
+        overflow-y: auto;
+        height: 78vh;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px 16px;
+    }
+
+    th {
+        background: #eee;
+    }
+</style>
+
+<div class="row">
+    <h4 class="col-md-1 text-center">@ViewData["type"]</h4>
+
+    <div class="form-row col-md-3">
+        <div>
+            <a asp-action="Create" asp-route-itemType="@ViewData["type"]" class="btn btn-primary" role="button">Create New</a>
+        </div>
+        <div class="col">
+            <input class="form-control" type="text" id="filter" placeholder="Search.." />
+        </div>
+    </div>
+</div>
+
+<p/>
+
+<div class="tableFixHead">
+    <table class="table table-bordered table-sm table-hover header-fixed">
+        <thead>
+            <tr>
+                <th></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ItemId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EquipType)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsUsable)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DDvMin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DDvMax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RDvMin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RDvMax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MDvMin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MDvMax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DPv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RPv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MPv)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dhit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Rhit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mhit)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DDd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RDd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MDd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Critical)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CriticalProtect)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DDvCriticalAdd)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DDvCriticalRemove)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HumanKiller)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HumanProtect)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MobKiller)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MobProtect)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Str)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dex)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Int)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HpRegen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.HpPotionRestore)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddPotionRestoreHp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddTransformMaxHp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Mp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MpRegen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MpPotionRestore)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddPotionRestoreMp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AddTransformMaxMp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IncDrop)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IncExp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IncSilver)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Weight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WeightMax)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsStack)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AttackRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AttackRateWhenTransform)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MoveRate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MoveRateWhenTransform)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DistanceAttack)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UseLevel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UseKnight)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UseRanger)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UseMagician)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UseAssassin)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UseSummoner)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UseInAttack)
+                </th>
+            </tr>
+        </thead>
+        <tbody class="searchable">
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="btn-group-vertical btn-group-sm">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-secondary">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-secondary">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger">Delete</a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EquipType)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsUsable)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DDvMin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DDvMax)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RDvMin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RDvMax)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MDvMin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MDvMax)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DPv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RPv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MPv)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dhit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rhit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mhit)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DDd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RDd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MDd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Critical)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CriticalProtect)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DDvCriticalAdd)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DDvCriticalRemove)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HumanKiller)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HumanProtect)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MobKiller)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MobProtect)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Str)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dex)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Int)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HpRegen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.HpPotionRestore)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddPotionRestoreHp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddTransformMaxHp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Mp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MpRegen)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MpPotionRestore)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddPotionRestoreMp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddTransformMaxMp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IncDrop)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IncExp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IncSilver)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Weight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.WeightMax)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsStack)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AttackRate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AttackRateWhenTransform)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MoveRate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MoveRateWhenTransform)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DistanceAttack)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UseLevel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UseKnight)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UseRanger)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UseMagician)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UseAssassin)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UseSummoner)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UseInAttack)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<script>
+    $(document).ready(function () {
+
+        (function ($) {
+
+            $('#filter').on("keyup", function () {
+
+                var rex = new RegExp($(this).val(), 'i');
+                $('.searchable tr').hide();
+                $('.searchable tr').filter(function () {
+                    return rex.test($(this).text());
+                }).show();
+
+            })
+
+        }(jQuery));
+
+    });
+
+    $('.tableFixHead').on('scroll', function () {
+        $('thead', this).css('transform', 'translateY(' + this.scrollTop + 'px)');
+    });
+</script>

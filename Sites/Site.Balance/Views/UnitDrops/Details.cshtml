@@ -1,0 +1,79 @@
+﻿@model Database.Balance.Models.UnitDropModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UnitDropModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Unit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Unit.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemStatus)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UseCount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UseCount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.EatTime)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.EatTime)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TermOfEffectivity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TermOfEffectivity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemBind)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemBind)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CountFrom)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CountFrom)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CountTo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CountTo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Percent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Percent)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,327 @@
+﻿@model Database.Balance.Models.UnitModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UnitModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UnitId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UnitId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Exp)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Exp)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reputation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reputation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DDvMin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DDvMin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DDvMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DDvMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MDvMin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MDvMin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MDvMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MDvMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RDvMin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RDvMin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RDvMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RDvMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DPv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DPv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MPv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MPv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RPv)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RPv)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dhit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dhit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DDd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DDd)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rhit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rhit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RDd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RDd)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Mhit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Mhit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MDd)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MDd)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AttackRate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AttackRate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MoveRate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MoveRate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HpMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HpMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HpRegen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HpRegen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MpMax)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MpMax)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MpRegen)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MpRegen)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DistanceMove)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DistanceMove)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DistanceAttack)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DistanceAttack)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsAggression)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsAggression)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsAggressionTransformation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsAggressionTransformation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsAggressionInvisible)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsAggressionInvisible)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DistanceAggression)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DistanceAggression)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PaymentType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PaymentType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Script)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Script)
+        </dd>
+    </dl>
+
+    @if (Model.UnitDrops != null && Model.UnitDrops.Count > 0)
+    {
+        <h4>Дроп юнита:</h4>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitDrops[0].Item.ItemId)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitDrops[0].Item.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitDrops[0].CountFrom)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitDrops[0].CountTo)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitDrops[0].Percent)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.UnitDrops)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Item.ItemId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CountFrom)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CountTo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Percent)
+                        </td>
+                        <td>
+                            <a asp-controller="Items" asp-action="Edit" asp-route-id="@item.Item.Id">Edit</a> |
+                            <a asp-controller="Items" asp-action="Details" asp-route-id="@item.Item.Id">Details</a> |
+                            <a asp-controller="Items" asp-action="Delete" asp-route-id="@item.Item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+
+    @if (Model.UnitPositions != null && Model.UnitPositions.Count > 0)
+    {
+        <h4>Позиции юнита:</h4>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitPositions[0].X)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitPositions[0].Z)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitPositions[0].Y)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.UnitPositions[0].DirectionSight)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.UnitPositions)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.X)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Z)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Y)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DirectionSight)
+                        </td>
+                        <td>
+                            <a asp-controller="Items" asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-controller="Items" asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-controller="Items" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

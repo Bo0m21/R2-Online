@@ -1,0 +1,235 @@
+﻿@model IEnumerable<Database.Balance.Models.UnitModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.UnitId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reputation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DDvMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DDvMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MDvMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MDvMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RDvMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RDvMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DPv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MPv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RPv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dhit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DDd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rhit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RDd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mhit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MDd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttackRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoveRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HpMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HpRegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MpMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MpRegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DistanceMove)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DistanceAttack)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAggression)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAggressionTransformation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAggressionInvisible)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DistanceAggression)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PaymentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Script)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UnitId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Exp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Reputation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DDvMin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DDvMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MDvMin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MDvMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RDvMin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RDvMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DPv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MPv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RPv)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Dhit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DDd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rhit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RDd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Mhit)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MDd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AttackRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoveRate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HpMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HpRegen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MpMax)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MpRegen)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DistanceMove)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DistanceAttack)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsAggression)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsAggressionTransformation)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsAggressionInvisible)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DistanceAggression)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PaymentType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Script)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

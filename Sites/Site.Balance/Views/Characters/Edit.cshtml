@@ -1,0 +1,166 @@
+﻿@using Database.Balance.Enums
+@model Database.Balance.Models.CharacterModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>CharacterModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Class" class="control-label"></label>
+                <select asp-for="Class" asp-items="Html.GetEnumSelectList<CharacterTypeEnum>()" class="form-control"></select>
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Level" class="control-label"></label>
+                <input asp-for="Level" class="form-control" />
+                <span asp-validation-for="Level" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DDvMin" class="control-label"></label>
+                <input asp-for="DDvMin" class="form-control" />
+                <span asp-validation-for="DDvMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DDvMax" class="control-label"></label>
+                <input asp-for="DDvMax" class="form-control" />
+                <span asp-validation-for="DDvMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MDvMin" class="control-label"></label>
+                <input asp-for="MDvMin" class="form-control" />
+                <span asp-validation-for="MDvMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MDvMax" class="control-label"></label>
+                <input asp-for="MDvMax" class="form-control" />
+                <span asp-validation-for="MDvMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RDvMin" class="control-label"></label>
+                <input asp-for="RDvMin" class="form-control" />
+                <span asp-validation-for="RDvMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RDvMax" class="control-label"></label>
+                <input asp-for="RDvMax" class="form-control" />
+                <span asp-validation-for="RDvMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DPv" class="control-label"></label>
+                <input asp-for="DPv" class="form-control" />
+                <span asp-validation-for="DPv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MPv" class="control-label"></label>
+                <input asp-for="MPv" class="form-control" />
+                <span asp-validation-for="MPv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RPv" class="control-label"></label>
+                <input asp-for="RPv" class="form-control" />
+                <span asp-validation-for="RPv" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dhit" class="control-label"></label>
+                <input asp-for="Dhit" class="form-control" />
+                <span asp-validation-for="Dhit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DDd" class="control-label"></label>
+                <input asp-for="DDd" class="form-control" />
+                <span asp-validation-for="DDd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Rhit" class="control-label"></label>
+                <input asp-for="Rhit" class="form-control" />
+                <span asp-validation-for="Rhit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RDd" class="control-label"></label>
+                <input asp-for="RDd" class="form-control" />
+                <span asp-validation-for="RDd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Mhit" class="control-label"></label>
+                <input asp-for="Mhit" class="form-control" />
+                <span asp-validation-for="Mhit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MDd" class="control-label"></label>
+                <input asp-for="MDd" class="form-control" />
+                <span asp-validation-for="MDd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Str" class="control-label"></label>
+                <input asp-for="Str" class="form-control" />
+                <span asp-validation-for="Str" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dex" class="control-label"></label>
+                <input asp-for="Dex" class="form-control" />
+                <span asp-validation-for="Dex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Int" class="control-label"></label>
+                <input asp-for="Int" class="form-control" />
+                <span asp-validation-for="Int" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HpMax" class="control-label"></label>
+                <input asp-for="HpMax" class="form-control" />
+                <span asp-validation-for="HpMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HpRegen" class="control-label"></label>
+                <input asp-for="HpRegen" class="form-control" />
+                <span asp-validation-for="HpRegen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MpMax" class="control-label"></label>
+                <input asp-for="MpMax" class="form-control" />
+                <span asp-validation-for="MpMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MpRegen" class="control-label"></label>
+                <input asp-for="MpRegen" class="form-control" />
+                <span asp-validation-for="MpRegen" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WeightMax" class="control-label"></label>
+                <input asp-for="WeightMax" class="form-control" />
+                <span asp-validation-for="WeightMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AttackRate" class="control-label"></label>
+                <input asp-for="AttackRate" class="form-control" />
+                <span asp-validation-for="AttackRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MoveRate" class="control-label"></label>
+                <input asp-for="MoveRate" class="form-control" />
+                <span asp-validation-for="MoveRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

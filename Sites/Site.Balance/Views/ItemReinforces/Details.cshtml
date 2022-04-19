@@ -1,0 +1,79 @@
+﻿@model Database.Balance.Models.ItemReinforceModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ItemReinforceModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemOld)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemOld.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ItemNew)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ItemNew.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item1Count)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item1Count)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item2.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item2Count)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item2Count)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item3.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Item3Count)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Item3Count)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Percent)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Percent)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

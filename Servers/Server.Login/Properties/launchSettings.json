@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Server.Login": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNETCORE_ENVIRONMENT": "Debug"
+      }
+    }
+  }
+}

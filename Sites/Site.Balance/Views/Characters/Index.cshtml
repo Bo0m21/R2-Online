@@ -1,0 +1,192 @@
+﻿@model IEnumerable<Database.Balance.Models.CharacterModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Level)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DDvMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DDvMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MDvMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MDvMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RDvMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RDvMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DPv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MPv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RPv)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dhit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DDd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rhit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RDd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mhit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MDd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Str)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Int)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HpMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HpRegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MpMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MpRegen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WeightMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AttackRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoveRate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Level)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DDvMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DDvMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MDvMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MDvMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RDvMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RDvMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DPv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MPv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RPv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dhit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DDd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rhit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RDd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mhit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MDd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Str)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Int)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HpMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HpRegen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MpMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MpRegen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WeightMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AttackRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoveRate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
